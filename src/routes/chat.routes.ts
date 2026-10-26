@@ -10,6 +10,7 @@ export function chatRoutes(chat: ChatController): Router {
   router.post('/:chatId/message/:messageId/read', chat.markRead);
   router.post('/:chatId/lastseen', chat.updateLastSeen);
 
+  
   // edit / delete
   router.patch('/:chatId/message/:messageId', chat.editMessage);
   router.delete('/:chatId/message/:messageId', chat.deleteMessage);
