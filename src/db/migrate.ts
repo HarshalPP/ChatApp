@@ -41,7 +41,6 @@ export async function runMigrations(pool: Pool): Promise<void> {
 }
 
 if (require.main === module) {
-  // Only needs the DB, so read DATABASE_URL directly instead of the full env config
   const databaseUrl = process.env.DATABASE_URL;
   if (!databaseUrl) {
     console.error('DATABASE_URL is not set');
